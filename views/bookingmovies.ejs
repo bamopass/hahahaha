@@ -1,0 +1,210 @@
+<%- include('partials/header'); -%>
+<style>
+    @import '/style.css';
+</style>
+<form action="/bookingmovies/<%=movieShowtimeID%>/<%=theaterID%>/<%=movieName%>/<%=showtime%>" method="post">
+
+<div class="container-fluid">
+    <div class="booking">
+        <div class="booking-detail">
+            <span class="theater"><%=theatertype%></span>
+            <h2><%=movieName%></h2>
+            <div class="sub">
+                <span class="subdetail"><i class="fa fa-map-marker"  aria-hidden="true"></i><%=branchName%></span>
+            </div>
+            <div class="sub">
+                <span class="subdetail"><i class="fa fa-video-camera" aria-hidden="true"></i>Theater <%=theaterID%></span>
+                <span class="subdetail"><i class="fa fa-clock-o" aria-hidden="true"></i><%=showtime%></span>
+                <span class="subdetail"><i class="fa fa-volume-down" aria-hidden="true"></i><%=audio%></span>
+            </div>
+        </div>  
+    </div>
+    <div class="seat-screen">
+        <div class="label">
+            <span class="seat"><i class="fa fa-square selected"></i><small>Selected</small></span>
+            <span class="seat"><i class="fa fa-square"><small></i>Available</small></span>
+            <span class="seat"><i class="fa fa-square occupied"></i><small>Occupied</small></span>
+        </div>
+        <div class="screen">Screen</div>
+        <div class="seats">
+            
+            <div class="seatrow">
+                <span class="rowlb">A</span>
+                <% for(var i=0; i < 15; i++) { %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">A</span> 
+            </div> 
+            <div class="seatrow">
+                <span class="rowlb">B</span>
+                <% for(var i=15; i < 30; i++) { %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">B</span> 
+            </div>
+
+            <div class="seatrow">
+                <span class="rowlb">C</span>
+                <% for(var i=30; i < 45; i++) { %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">C</span> 
+            </div> 
+
+
+            <div class="seatrow">
+                <span class="rowlb">D</span>
+                <% for(var i=45; i < 60; i++) { %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">D</span> 
+            </div> 
+
+            <div class="seatrow">
+                <span class="rowlb">E</span>
+                <% for(var i=60; i < 75; i++) { %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">E</span> 
+            </div> 
+
+            <div class="seatrow">
+                <span class="rowlb">F</span>
+                <% for(var i=75; i < 90; i++) { %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position[<%=i%>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">F</span> 
+            </div>
+            
+            <div class="seatrow">
+                <span class="rowlb">G</span>
+                <% for(var i=90; i < 105; i++) { %>
+                    <% varbuffer =  i-90 %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position90[<%= varbuffer %>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position90[<%= varbuffer %>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">G</span> 
+            </div>
+
+            <div class="seatrow">
+                <span class="rowlb">H</span>
+                <% for(var i=105; i < 120; i++) { %>
+                    <% varbuffer =  i-90 %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position90[<%= varbuffer %>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position90[<%= varbuffer %>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">H</span> 
+            </div>
+
+            <div class="seatrow">
+                <span class="rowlb">I</span>
+                <% for(var i=120; i < 135; i++) { %>
+                    <% varbuffer =  i-90 %>
+                    <% if(seat_position[i] == 0 ){ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position90[<%= varbuffer %>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square"></label></span>
+                    <% }else{ %>
+                    <span class="seat"><input type="checkbox" id="<%=i%>" name="position90[<%= varbuffer %>]" value="<%=i%>"/><label for="<%=i%>" class="fa fa-square occupied"></label></span>
+                    <% } %>
+                <% } %>
+                <span class="rowlb">I</span> 
+            </div>
+
+        
+            <div class="row seatcolumn"> 
+                <span class="col number">1</span>
+                <span class="col number">2</span>
+                <span class="col number">3</span>
+                <span class="col number">4</span>
+                <span class="col number">5</span>
+                <span class="col number">6</span>
+                <span class="col number">7</span>
+                <span class="col number">8</span>
+                <span class="col number">9</span>
+                <span class="col number">10</span>
+                <span class="col number">11</span>
+                <span class="col number">12</span>
+                <span class="col number">13</span>
+                <span class="col number">14</span>
+                <span class="col number">15</span>
+            </div>
+        </div>
+    </div>
+    <div class="yourseat">
+        Seats: <span id="count">0</span><br>
+        Position:<span id="position">-</span><br>
+        Price: <span id="total">0 </span>BAHT
+
+    </div>
+    <div class="proceed">
+        <a class="back-btn" href="/"><i class="fa fa-chevron-left"></i><span >Back</span></a>
+        <button class="next-btn" type="submit">Check Out</button> 
+    </div>
+    
+</div>
+</form>
+
+<script>
+    var countChecked = function() {
+      var n = $( "input:checked" ).val();
+      var number = $( "input:checked" ).length;
+      $( "#count" ).text( number );
+      $( "#total" ).text( number * <%=seat.price%>);
+    };
+    countChecked();
+    $( "input[type=checkbox]" ).on( "click", countChecked );
+
+
+    $("input[type=checkbox]").click(function(){
+        var position = [
+        'A1','A2','A3','A4','A5','A6','A7','A8','A9','A10','A11','A12','A13','A14','A15',
+        'B1','B2','B3','B4','B5','B6','B7','B8','B9','B10','B11','B12','B13','B14','B15',
+        'C1','C2','C3','C4','C5','C6','C7','C8','C9','C10','C11','C12','C13','C14','C15',
+        'D1','D2','D3','D4','D5','D6','D7','D8','D9','D10','D11','D12','D13','D14','D15',
+        'E1','E2','E3','E4','E5','E6','E7','E8','E9','E10','E11','E12','E13','E14','E15',
+        'F1','F2','F3','F4','F5','F6','F7','F8','F9','F10','F11','F12','F13','F14','F15',
+        'G1','G2','G3','G4','G5','G6','G7','G8','G9','G10','G11','G12','G13','G14','G15',
+        'F1','F2','F3','F4','F5','F6','F7','F8','F9','F10','F11','F12','F13','F14','F15',
+        'I1','I2','I3','I4','I5','I6','I7','I8','I9','I10','I11','I12','I13','I14','I15'
+            ]
+        var selectedPosition = new Array();
+        var n = jQuery("input[type=checkbox]:checked").length;
+        if (n > 0){
+            $("input[type=checkbox]:checked").each(function(){
+                selectedPosition.push(position[$(this).val()]);
+                // $(this).val() = 1;
+            });
+        }
+        $( "#position" ).text(selectedPosition)
+    });
+ </script>
+

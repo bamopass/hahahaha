@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        
+        <!-- Bootstrap Select -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/css/bootstrap-select.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+        <!--our source -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="movietoggle.js"></script>
+      </head>    
+ 
+      
+     <!--navbar section-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="#navbarNavAltMarkup">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><b>HOME</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> MENU 
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class = "navbar-nav ml-auto">
+          <li class = "nav-item"><a href="/cinema" class="nav-link ">Cinema<span class="sr-only">(current)</span></a></li>
+          <li class = "nav-item"><a href="/movie" class="nav-link">Movies</a></li>
+          <li class = "nav-item"><a href="/promotion" class="nav-link">Promotion</a></li>
+          <% if(!currentUser_email){ %>
+          <li class = "nav-item"><a href="/login" class="nav-link"><span>Login/Sign up</span></a></li>
+          <% }else{ %>
+            <li class = "nav-item"><a href="#" class="nav-link">Welcome <%= currentUser_email %></a></li>
+            <li class = "nav-item"><a href="/logout" class="nav-link">logout</a></li>
+        <% } %>
+        </ul>
+      </div>
+    </div> 
+  </nav>
+
+  
+
+
+
+
+

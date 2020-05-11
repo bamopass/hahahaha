@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home</title>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        
+        <!-- Bootstrap Select -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/css/bootstrap-select.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.5/js/bootstrap-select.min.js"></script>
+    
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+        <!--our source -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script type="text/javascript" src="movietoggle.js"></script>
+      </head>    
+ 
+      
+     <!--navbar section-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="#navbarNavAltMarkup">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><b>HOME</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> MENU 
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class = "navbar-nav ml-auto">
+            <li class = "nav-item"><a href="#" class="nav-link">Welcome <%= currentAdmin %></a></li>
+            <li class = "nav-item"><a href="/adminLogout" class="nav-link">logout</a></li>
+        </ul>
+      </div>
+    </div> 
+    </nav>
+
+    <div class="analysis">
+        <div class="row">
+            <div class="column-menu">
+                <div class="analysis-text"><i class="fa fa-bar-chart" aria-hidden="true"></i>analysis</div>
+                <ul class="analysis-topics">
+                    <li><a class="topic" href="#analysis1">Top 3 Popular Movies</a></li>
+                    <li><a class="topic" href="#analysis2">Member Status Booking Tickets</a></li>
+                    <li><a class="topic" href="#analysis3">Customer Booking Tickets</a></li>
+
+                    <li><a class="topic" href="#analysis4">The Number of Movie Genres</a></li>
+                    <li><a class="topic" href="#analysis5">The Number of Movies in This Month</a></li>
+                    <li><a class="topic" href="#analysis6">The Highest Number of Movies Added by Admin</a></li>
+
+                    <li><a class="topic" href="#analysis7">Employees in Each Branch</a></li>
+                    <li><a class="topic" href="#analysis8">The Amount of Position in Each Branch </a></li>
+                    <li><a class="topic" href="#analysis9">The Amount of Employees in Each Branch by Gender</a></li>
+
+                    <li><a class="topic" href="#analysis10">The Highest Seat Price of Each Branch</a></li>
+                    <li><a class="topic" href="#analysis11">Price of Seat Type by Theater Type</a></li>
+                    <li><a class="topic" href="#analysis12">The Lowest Seat Price by Theater Type in Each Branch</a></li>
+                </ul>
+                <div class="proceed">
+                    <a class="back-btn" href="./manageAdmin"><i class="fa fa-chevron-left"></i><span>Back</span></a>
+                </div>
+            </div>
+            <div class="column-result">
+                <div id="analysis1">
+                    <h2><span>Analysis :</span> Top 3 Popular Movies</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>Empty</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis2">
+                    <h2><span>Analysis : </span>Member Status Booking Tickets</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>Empty</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis3">
+                    <h2><span>Analysis : </span>Customer Booking Tickets</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>Empty</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                               
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis4">
+                    <h2><span>Analysis : </span>The Number of Movie Genres</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>SELECT g.genreTypeID, g.genreTypeName,COUNT(m.movieID) AS COUNT <br>
+                                    FROM moviedata m <br>
+                                    LEFT JOIN moviegenre g ON g.genreTypeID = m.genreTypeID <br>
+                                    WHERE (m.ReleaseMonth BETWEEN 1 AND 2) AND (m.ReleaseYear = 2020) <br>
+                                    GROUP BY m.genreTypeID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>genreTypeID</th>
+                                    <th>genreType</th>
+                                    <th>Count</th>
+                                </tr>
+                                <%
+                                if (topic4.length!=0) {
+                                var i=1;
+                                topic4.forEach(function(analysis4) {
+                                %>
+                                <tr>
+                                    <td><%=analysis4.genreTypeID %></td>
+                                    <td><%=analysis4.genreTypeName %></td>
+                                    <td><%=analysis4.COUNT %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis5">
+                    <h2><span>Analysis : </span>The Number of Movies in This Month</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>SELECT m.movieID, m.movieName,COUNT(DISTINCT bm.bookingMovieID) AS COUNT <br>
+                                    FROM moviedata m, movieshowtime sh, bookingmovie bm <br>
+                                    WHERE bm.movieShowtimeID = sh.movieShowtimeID AND sh.movieID = m.movieID <br>
+                                    GROUP BY m.movieID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>movieID</th>
+                                    <th>movieName</th>
+                                    <th>Count</th>
+                                </tr>
+                                <%
+                                if (topic5.length!=0) {
+                                var i=1;
+                                topic5.forEach(function(analysis5) {
+                                %>
+                                <tr>
+                                    <td><%=analysis5.movieID %></td>
+                                    <td><%=analysis5.movieName %></td>
+                                    <td><%=analysis5.Count %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis6">
+                    <h2><span>Analysis : </span>The Highest Number of Movies Added by Admin</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>Empty</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                               
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis6">
+                    <h2><span>Analysis : </span>The Highest Number of Movies Added by Admin</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <textarea name="sqlStatement" class="sql-input__input" rows="10"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                               
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis7">
+                    <h2><span>Analysis : </span>Employees in Each Branch</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>SELECT b.branchID, b.branchName, COUNT(employeeID) AS Count <br>
+                                    FROM branch b, employee e <br>
+                                    WHERE e.branchID = b.branchID<br>
+                                    GROUP BY b.branchID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>branchID</th>
+                                    <th>branchName</th>
+                                    <th>Count</th>
+                                </tr>
+                                <%
+                                if (topic7.length!=0) {
+                                var i=1;
+                                topic7.forEach(function(analysis7) {
+                                %>
+                                <tr>
+                                    <td><%=analysis7.branchID %></td>
+                                    <td><%=analysis7.branchName %></td>
+                                    <td><%=analysis7.Count %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis8">
+                    <h2><span>Analysis : </span>The Amount of Position in Each Branch</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>SELECT b.branchID, b.branchName, p.JobPosition, COUNT(employeeID) AS Count <br>
+                                    FROM branch b, employee e, position p <br>
+                                    WHERE e.branchID = b.branchID AND e.positionID = p.positionID <br>
+                                    GROUP BY b.branchID, p.positionID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>branchID</th>
+                                    <th>branchName</th>
+                                    <th>position</th>
+                                    <th>Count</th>
+                                </tr>
+                                <%
+                                if (topic8.length!=0) {
+                                var i=1;
+                                topic8.forEach(function(analysis8) {
+                                %>
+                                <tr>
+                                    <td><%=analysis8.branchID %></td>
+                                    <td><%=analysis8.branchName %></td>
+                                    <td><%=analysis8.JobPosition %></td>
+                                    <td><%=analysis8.Count %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+                            </table>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis9">
+                    <h2><span>Analysis : </span>The Amount of Employees in Each Branch by Gender</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>SELECT b.branchID, b.branchName, e.gender, COUNT(employeeID) AS Count <br>
+                                    FROM branch b, employee e <br>WHERE e.branchID = b.branchID <br>
+                                    GROUP BY b.branchID, e.gender</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>branchID</th>
+                                    <th>branchName</th>
+                                    <th>gender</th>
+                                    <th>Count</th>
+                                </tr>
+                                <%
+                                if (topic9.length!=0) {
+                                var i=1;
+                                topic9.forEach(function(analysis9) {
+                                %>
+                                <tr>
+                                    <td><%=analysis9.branchID %></td>
+                                    <td><%=analysis9.branchName %></td>
+                                    <td><%=analysis9.gender %></td>
+                                    <td><%=analysis9.Count %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis10">
+                    <h2><span>Analysis : </span>The Highest Seat Price of Each Branch</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement used:</h6>
+                            <div class="sql-input">
+                                <p>SELECT s.branchID, branchName, MAX(price) AS highestPrice<br>FROM seatprice s, branch b <br>WHERE s.branchID = b.branchID <br>GROUP BY b.branchID <br>ORDER BY highestPrice DESC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>branchID</th>
+                                    <th>branchName</th>
+                                    <th>highestPrice</th>
+                                </tr>
+                                <%
+                                if (topic10.length!=0) {
+                                var i=1;
+                                topic10.forEach(function(analysis10) {
+                                %>
+                                <tr>
+                                    <td><%=analysis10.branchID %></td>
+                                    <td><%=analysis10.branchName %></td>
+                                    <td><%=analysis10.highestPrice %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+            
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis11">
+                    <h2><span>Analysis : </span>Price of Seat Type by Theater Type</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p> SELECT sp.price, s.seatType, tt.theaterTypeName<br>
+                                    FROM seatprice sp, seat s, theaterType tt<br>
+                                    WHERE sp.seatID = s.seatID AND sp.theatertypeID = tt.theaterTypeID<br>
+                                    GROUP BY s.seatType, tt.theaterTypeID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>theaterType</th>
+                                    <th>seatType</th>
+                                    <th>price</th>
+                                </tr>
+                                <%
+                                if (topic11.length!=0) {
+                                var i=1;
+                                topic11.forEach(function(analysis11) {
+                                %>
+                                <tr>
+                                    <td><%=analysis11.theaterTypeName %></td>
+                                    <td><%=analysis11.seatType %></td>
+                                    <td><%=analysis11.price %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+                <div id="analysis12">
+                    <h2><span>Analysis : </span>The Lowest Seat Price by Theater Type in Each Branch</h2>
+                    <div class="sql-statement">
+                        <div class="sql-statement__inner">
+                            <h6>SQL Statement:</h6>
+                            <div class="sql-input">
+                                <p>SELECT b.branchName, tt.theaterTypeName, MIN(price) AS lowestPrice <br>
+                                    FROM branch b, theater t, theatertype tt, seatprice p <br>
+                                    WHERE b.branchID = t.branchID AND t.theaterTypeID = tt.theaterTypeID <br>
+                                    GROUP BY b.branchID, tt.theaterTypeID</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <div class="result-tb">
+                            <h6>Result:</h6>
+                            <table>
+                                <tr>
+                                    <th>branchName</th>
+                                    <th>theaterType</th>
+                                    <th>lowestPrice</th>
+                                </tr>
+                                <%
+                                if (topic12.length!=0) {
+                                var i=1;
+                                topic12.forEach(function(analysis12) {
+                                %>
+                                <tr>
+                                    <td><%=analysis12.branchName %></td>
+                                    <td><%=analysis12.theaterTypeName %></td>
+                                    <td><%=analysis12.lowestPrice %></td>
+                                </tr>
+                                <% i++; }) %>
+                                <% } %>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="close-btn"><a href="./adminAnalysis"><i class="material-icons">close</i>Close</a></div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</html>
+
+<script>
+$('li').on('click', function(){
+    $('li').removeClass('selected');
+    $(this).addClass('selected');
+});
+</script>

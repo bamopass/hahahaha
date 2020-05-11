@@ -1,0 +1,27 @@
+{
+    "name": "learn",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "Router": "^2.1.0",
+        "body-parser": "^1.19.0",
+        "connect-flash": "^0.1.1",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "express-sanitizer": "^1.0.5",
+        "express-session": "^1.17.0",
+        "formidable": "^1.2.2",
+        "method-override": "^3.0.0",
+        "multer": "^1.4.2",
+        "mysql": "^2.18.1",
+        "node-popup": "^0.1.14",
+        "nodemon": "^2.0.2"
+    }
+}

@@ -1,0 +1,1043 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Days+One');
+
+body {
+    font-family: 'Poppins';
+    letter-spacing: 1.5px;
+    background-color: #13161F;
+}
+.promotion {
+    margin: 0 20px;
+    border-radius: 3px;
+    background-color: white;
+    padding: 30px 80px;
+}
+.manage, .booking , .cinema{
+    margin: 25px 20px;
+    border-radius: 3px;
+    background-color: white;
+    padding: 30px 80px;
+}
+
+/*---------------------
+    navbar section
+-----------------------*/
+
+.container-fluid {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.navbar-nav {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+
+
+/*---------------------
+    search section
+-----------------------*/
+
+.col-5 {
+    padding-left: 30px;
+   
+}
+
+.bootstrap-select, .dropdown-toggle {
+    border-radius: 3px;
+    font-size: 14px; letter-spacing: 1px;
+    padding: 6px 0 6px 3px;
+}
+.opt-style {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.dropdown-item.active, .dropdown-item:active{
+	background: #00D4F1;
+}
+.btn-showtime {
+    background-color: #00D4F1; 
+    border: none;
+    border-radius: 3px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: -27px;
+    margin-top: 6px;
+    padding: 6px;
+    font-size: 12px; letter-spacing: 1px; font-weight: bold;
+    width: 90px;
+}
+.search {
+    padding: 7px; 
+    width: 150%;
+    margin-left: 50px;
+}
+.search input[type=text]{
+    letter-spacing: 1px;
+    font-size: 13px;
+    color:  #00D4F1;
+    border-radius: 15px;
+    padding: 12px;
+}
+.search input[type=text]:focus:not([readonly]) {
+    border: 2px solid #4dd0e1; 
+}
+.fa-search {
+    color: #4dd0e1;
+    margin-left: -40px;
+}
+
+/*---------------------
+        carousel
+-----------------------*/
+.poster-carousel {
+    position: absolute;
+    top: 70px;
+    left: 170px;
+    max-width: 20%;
+    border-radius: 10px;
+}
+.cover-carousel {
+    filter: brightness(50%);
+    z-index: -1;
+      
+}
+.title-carousel {
+    color: white;
+    font-family: Days One;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 15%;
+    left: 37%;
+    z-index: 1;
+}
+.info-carousel {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: 28%;
+    left: 37%;
+    right:20%;
+    z-index: 1;
+}
+.btn-buy {
+    background-color: #00D4F1; 
+    border: none;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 12px 24px;
+    position: absolute;
+    bottom: 48%;
+    left: 37%;
+    text-decoration: none;
+
+}
+.btn-buy:hover {
+    opacity: 0.9;
+
+}
+.btn-buy a:hover{
+    text-decoration: none;
+    color: white;
+}
+p {
+    font-size: 10px;
+}
+
+/*---------------------
+        Movies
+-----------------------*/
+.mv-row {
+    padding: 20px 30px 0 20px;
+    border-bottom: .5px solid #ccc;
+}
+h4 {
+    color: white;
+}
+
+.movies h5 {
+    font-weight: bold;
+}
+
+.movies .nav-link {
+    padding: 1rem .6rem;
+    font-size: 14px;
+    color: white;
+}
+
+.movies .nav-link:hover {
+    color: #4dd0e1;
+}
+
+.movies .nav-link.active {
+    position: relative;
+    color: #4dd0e1;
+    font-weight: 900;
+}
+
+.movies a.nav-link.active:after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: -2.15px;
+    left: 0;
+    background-color: #4dd0e1;
+}
+
+.movies .movies-list {
+    overflow-y: scroll;
+    margin-top: 20px
+}
+
+.movies-list article {
+    display: none;
+}
+
+.movies-list article.active {
+    display: block;
+}
+
+.movies-list .movie {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}
+.movies-list .movie .poster {
+    width: 100%;
+    border-radius: 10px; 
+}
+.movies-list .movie .title {
+    padding-top: 13px;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.movies-list .movie .info {
+    padding-top: 3px;
+    font-size: 10px;
+    color: #ccc;
+    font-weight: 2px;
+}
+.row-month {
+    height: 38px;  
+}
+.row-month2 {
+    height: 38px;
+    margin-top: 40px;
+}
+.vl {
+    border-right: 4px solid #4dd0e1;
+    height: 5px;
+    padding-left: 5px;
+}
+.month {
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 7px;
+}
+
+.hide-left {
+    display: none;
+    position: absolute;
+    top: 5px;
+    padding: 20px 55px 20px 55px;
+    border-radius: 5px;
+    background-color: white;
+    width: 530px;
+    height: 95%;
+    font-size: 11px; 
+}
+.hide-left .row, .hide-right .row {
+    padding: 10px 0 10px 0px;
+}
+.show:hover .title {
+    color: #4dd0e1;
+    font-weight: bold;
+}
+.show:hover .info {
+    color: white;
+}
+
+.hide-right {
+    display: none;
+    position: absolute;
+    top: 5px;
+    padding: 20px 55px 20px 55px;
+    border-radius: 5px;
+    background-color: white;
+    width: 530px;
+    height: 95%;
+    font-size: 11px; 
+}
+.show:hover + .hide-left {
+    display: block;
+    left: 250px;
+    z-index: 1;
+}
+.show:hover +.hide-right {
+    display: block;
+    right: 250px;
+    z-index: 1;
+}
+.detail .row  {
+    border-bottom: .5px solid lightgrey;
+}
+.theater {
+    background-color: #4dd0e1;
+    padding: 3px 12px 3px 12px;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.detail .rating {
+    text-align: center;
+    
+}
+.spacial {
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    height: 30px;
+   
+}
+.detail p{
+    font-weight: bold;
+    font-size: 12px;
+}
+.row.plot {
+    height: 240px;
+}
+.row.date {
+    border-bottom: none;
+
+}
+.col.cdate {
+    left: -14px;
+    
+}
+
+/*---------------------
+        Cinema
+-----------------------*/
+
+.area {
+    border-bottom: 1px solid black;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.branch {
+    padding: 5px 50px 5px 50px;  
+}
+.logo {
+    height: 90px;
+    float: left;
+    cursor: pointer;
+}
+.b-info {
+   padding-top: 20px;
+   cursor: pointer;
+   border: none;
+   text-align: left;
+}
+.b-info:hover {
+    color: #4dd0e1;
+}
+.name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.Tel {
+    font-size: 11px;
+}
+
+/*---------------------
+        Admin
+-----------------------*/
+h3 {
+    font-weight: 700;
+    font-size: 40px;
+    padding-top: 110px;
+    padding-bottom: 90px;
+    
+}
+.manage {
+    text-transform: uppercase;
+    height: 650px;
+    text-align: center;
+}
+
+.manage .manage-btn {
+    background-color:black;
+    border-radius: 3px;
+    color: white;
+    padding: 15px 48px 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px 10px;
+    cursor: pointer;
+    position: relative;
+}
+.manage .manage-btn:hover {
+    background-color: #FFD41F;
+}
+
+.manage .manage-btn:hover .manage-hover {
+	top: 52px;
+	opacity: 1;
+	visibility: visible;
+	z-index: 99;
+}
+
+.manage .manage-btn:before {
+	position: absolute;
+	color: #ffffff;
+	right: 20px;
+	top: 13px;
+	content: "";
+	font-family: FontAwesome;
+	font-size: 18px;
+}
+
+.manage .manage-btn .manage-hover {
+	position: absolute;
+	width: 100%;
+    background: #fff;
+    border: .5px solid #FFD41F;
+	left: 0;
+	margin-top: -1px;
+	opacity: 0;
+	visibility: hidden;
+	padding-bottom: 29px;
+	transition: all 0.5s;
+}
+
+.manage .manage-btn .manage-hover li {
+	list-style: none;
+}
+
+
+.manage .manage-btn .manage-hover li a {
+	display: block;
+	font-size: 13px;
+	color: #000000;
+	margin-left: -16px;
+	padding-top: 16px;
+    padding-right: 30px;
+    text-align: center;
+}
+
+.manage .manage-btn .manage-hover li a:hover {
+    color: #FFD41F;
+    text-decoration: none;
+}
+
+/*---------------------
+      Booking page
+-----------------------*/
+.booking h2 {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase; 
+}
+.booking .fa {
+    color: #00D4F1;
+    font-size: 18px;
+}
+.booking .fa-map-marker, .fa-video-camera {
+    margin-left: 3px;
+}
+.booking .fa-video-camera {
+    font-size: 12px;
+}
+.booking .theater {
+    font-size: 10px;
+}
+.booking .subdetail {
+    font-weight: 600;
+    font-size: 12px;
+}
+.booking .sub .subdetail {
+    padding-right: 80px;
+}
+.booking .sub .subdetail i{
+    padding-right: 10px;
+    position: relative;
+    top: 3px;
+}
+
+/*-----------------
+        Seat
+-----------------*/
+.seat-screen {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.seat-screen .screen {
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.7);
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 20px 280px 25px 280px;
+    padding: 3px;
+}
+
+.seat-screen .label .seat {
+    padding: 60px;
+}
+.seat-screen .label i {
+    font-size: 18px; 
+    position: relative;
+    top: 3px;
+    padding-right: 10px;
+}
+.label small {
+    color: white;
+    margin-left: 2px;
+    font-size: 10px;
+}
+.seat .occupied {
+    color: #E43A55;
+}
+.seat .selected {
+    color: #00D4F1;
+}
+.seat {
+    color: #2B3F57;
+}
+.seats .seat label {
+    font-size: 32px;
+    padding: 0px 4px;
+}
+.seats label:not(.occupied):hover {
+    color: #6386AE;
+    cursor: pointer;
+}
+.seats .seat .occupied {
+    cursor: not-allowed;
+}
+.seat input[type=checkbox] {
+    display: none;
+}
+.seat input[type=checkbox]:checked + label:not(.occupied) {
+    color: #00D4F1;
+  }
+.seats .rowlb {
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 0 12px;
+    position: relative;
+    top: -5px;
+    width: 10px;
+    text-align: center;
+}
+
+.seats .row.seatcolumn {
+    font-weight: 800;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 310px;
+}
+.seats .row.seatcolumn .col.number {
+    padding: 0 11px;
+}
+#count, #total {
+    color: #4dd0e1;
+    padding: 10px;
+}
+#count {
+    padding-right: 40px;
+}
+.yourseat {
+    text-align: center;
+    color: white;
+    margin: 35px 450px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #2B3F57;
+}
+.proceed {
+    text-align: center;   
+    padding-bottom: 50px; 
+}
+.back-btn+.next-btn {
+    margin-left: 15px;
+}
+.proceed .back-btn, .proceed .next-btn {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.proceed .back-btn {
+    background-color: #444F62;
+    
+}
+
+.proceed .next-btn {
+    background-color: #4dd0e1;
+}
+.fa-chevron-left {
+    padding-right: 5px;
+    position: relative;
+    left: -5px;
+}
+
+.proceed a:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 0.9;
+   
+}
+
+/*-----------------
+      Promotion
+-----------------*/
+.promotion h4 {
+    color: #000;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+    
+}
+
+
+/*----------------------------
+    Add Seat Price & Branch
+-----------------------------*/
+.seat-form, .branch-form {
+    padding: 50px 385px;
+    
+}
+.seat-form__inner, .branch-form__inner{
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 60px;
+}
+.seat-form__inner h4, .branch-form__inner h4 {
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 15px;
+  
+}
+.seatprice-input, .branch-input {
+    margin-bottom: 20px;
+}
+.seatprice-input__label, .branch-input__label {
+    font-size: 15px;
+    font-weight: 900px;
+    color: black;
+    display: block;
+    text-transform: uppercase;
+    
+}
+.seatprice-input__input, .branch-input__input {
+    width: 100%;
+    height: 38px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #ced6e0;
+    transition: all 0.3s ease-in-out;
+    font-size: 15px;
+    padding: 5px 15px;
+    background: none;
+    color: #4dd0e1;
+}
+.seatprice__row {
+    padding-bottom: 7px;
+}
+.theatertype__input input[type=checkbox] {
+    display: none;
+    
+}
+.theatertype__input {
+    padding: 6px;
+}
+.theatertype__input label{
+    border-radius: 20px;
+    border: 1.5px solid #00D4F1;
+    padding: 7px 22px;
+    color: #00D4F1;
+    font-size: 14px;
+    font-weight: 800;
+}
+.theatertype__input label:hover {
+    cursor: pointer;
+    background-color: #00D4F1;
+    color: #fff;
+}
+.theatertype__input input[type=checkbox]:checked + label {
+    background-color: #00D4F1;
+    color: #fff;
+}
+.seatprice-btn {
+    text-align: center;
+
+}
+.seatprice-btn button:hover{
+    opacity: 0.9;
+}
+.save-btn, .cancel-btn {
+    height: 53px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.cancel-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+.save-btn {
+    width: 60%;
+    background:#00D4F1;
+    border: none;
+    box-shadow: 3px 10px 20px 0px rgba(35, 100, 210, 0.3);
+    color: #fff;
+    margin-left: 14px;
+   
+}
+.cancel-btn {
+    width: 34%;
+    background: #2B3F57;
+    border: none;
+    color: #fff;
+    box-shadow: 3px 10px 20px 0px rgba(31, 64, 119, 0.3);
+}
+
+/*-----------------
+     Showtime
+-----------------*/
+.movies.showtime {
+    padding: 10px 20px;
+}
+.movies.showtime .row-movie {
+    margin-top: 15px;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-bottom: .5px solid #444F62;
+}
+.movies.showtime .col.col-movie {
+    padding-left: 15px;
+    padding-top: 5px;
+}
+.movies.showtime .poster {
+   width: 95%;
+   border-radius: 10px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.movies.showtime .nav-link {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.movies.showtime .nav {
+    border-bottom: .5px solid #ccc;
+}
+.movies.showtime  .nav-link.active {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.movies.showtime li {
+    padding-right: 30px; 
+}
+.movies.showtime .genres {
+    font-size: 11px;
+    color: #82eefd;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.movies.showtime .title {
+    font-size: 28px;
+    color: #fff;
+    padding: 9px 0;
+}
+.movies.showtime .rightcorner{
+    float: right;
+    font-weight: lighter;
+    margin-top: -27px;
+}
+.movies.showtime .rightcorner .rate {
+    background-color: #00bfff;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    line-height: 30px;
+    margin-left: 5px;
+}
+.rightcorner .lenght {
+    color: #fff;
+    font-size: 12px;
+    
+}
+.movies.showtime .plot p{
+    color: #ccc;
+    font-size: 10px;
+    display:block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.movies.showtime .more-info {
+    padding-bottom: 27px;
+}
+.movies.showtime .more-info a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #4dd0e1;
+    
+} 
+.movies.showtime .more-info i {
+    padding-left: 10px;
+}
+.movies.showtime .more-info a:hover {
+    color: #00bfff;
+}
+.row.sub {
+    height: 70px;
+    display: table-cell;
+    vertical-align: bottom;
+}
+.movies.showtime .col.theater-showtime {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    overflow: auto;
+    left: -10px;
+}
+.movies.showtime .theater-showtime .time {
+    color: #fff;
+    font-size: 14px;
+    padding:  6px;
+}
+.movies.showtime .theater-showtime .time a.disable {
+    pointer-events: none;
+    cursor: default;
+    color: #2B3F57;
+}
+.movies.showtime .theater-showtime .time a:hover:not(.disable) {
+    color: #4dd0e1;
+    text-decoration: none;
+}
+/*-----------------
+     Analysis
+-----------------*/
+.analysis .analysis-text {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.analysis-text .fa {
+    padding-right: 12px;
+    margin-left: -12px;
+}
+.analysis .row {
+    background-color: #F5F5F2;
+}
+.analysis .column-menu {
+    width: 27%;
+    background-color: #13161F;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 8px;
+}
+.analysis .proceed .back-btn {
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    top: 15px;
+}
+.analysis ul.analysis-topics {
+    list-style-type: none;
+    color: #fff;
+    font-size: 12px;
+    margin: 30px -25px;
+    height: 570px;
+    
+}
+.analysis-topics li {
+    padding: 11px 0;
+    cursor: pointer;
+    padding-left: 60px;
+    padding-right: 70px;
+}
+.analysis-topics li a:hover {
+    text-decoration: none;
+}
+.analysis .column-result {
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+}
+.analysis .column-result h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500px;
+    padding-bottom: 20px;
+}
+.analysis-topics li:focus{
+    color: #FCD92A;
+    
+}
+#analysis1, #analysis2, #analysis3,
+#analysis4, #analysis5, #analysis6,
+#analysis7, #analysis8, #analysis9,
+#analysis10, #analysis11, #analysis12 {
+    display: none;
+}
+
+#analysis1:target, #analysis2:target, #analysis3:target, 
+#analysis4:target, #analysis5:target, #analysis6:target,
+#analysis7:target, #analysis8:target, #analysis9:target, 
+#analysis10:target, #analysis11:target, #analysis12:target   {
+    display: block;
+}
+.analysis .column-result h2 {
+    position: relative;
+    left: 20%;
+    width: 60%;
+
+}
+.analysis .column-result h2 span{
+    font-weight: 600; 
+}
+.sql-statement, .result{
+    padding: 10px 150px;
+}
+.analysis h6 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: start;
+}
+.sql-statement__inner, .result-tb {
+    background: #fff;
+    box-shadow: 0 10px 40px 0 rgba(182, 175, 162, 0.3);
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: black;
+}
+.sql-input p {
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #FCD92A;
+    font-size: 13px;
+    padding: 6px 15px;
+    background: none;
+    text-align: start;
+}
+table {
+    width: 100%;
+    margin: 0;
+    border-radius: 1px;
+    overflow: hidden;
+    border: 1px solid #D0DFFF;
+
+}
+th {
+    background-color: #FFD41F;
+    font-size: 14px;
+}
+td {
+    font-size: 12px;
+}
+th,td {
+    border: 1px solid #FFD41F;
+    padding: 5px;
+} 
+
+.close-btn {
+    background-color: #13161F;
+    color: #fff;
+    font-weight: 900;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: relative;
+    top: 30px;
+    left: 44%;
+    width: 120px;
+}
+.close-btn:hover {
+    background-color: black;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 10px 40px 0 rgba(145, 140, 133, 0.3);
+}
+.close-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+.close-btn i {
+    padding-right: 8px;
+    position: relative;
+    top: 6px;
+    font-size: 20px;
+}
+.analysis ul li:not(.selected) a:hover {
+    text-decoration: none;
+    color: #FCD92A;
+}
+.analysis ul li:not(.selected):hover  {
+    color: #FCD92A;
+    border-left: 4px solid #FCD92A;
+   
+}
+.analysis li.selected {
+    color: #000;
+    background-color: #F5F5F2;
+    font-weight: 900;
+    border-left: 6px solid #FCD92A;
+}
+.analysis ul a {
+    color: inherit;
+}

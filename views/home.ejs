@@ -1,0 +1,360 @@
+
+<%- include('partials/header'); -%>
+
+<form action="/searchMovies" method="post">
+  <!-- search section -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- <form action="/searchMovie" method="post"> -->
+        <div class="col-5">
+
+          <select class="selectpicker form-control-sm" title="Find All Movies" data-live-search="true" data-width="42%" data-style="btn-dark" name="SearchMovie" required>
+            <% movies.forEach(function(movie){ %>
+              <option class="opt-style" value="<%=movie.movieID%>"><%=movie.movieName%></option>
+          <% }); %> 
+          </select>
+
+          <select class="selectpicker form-control-sm" title="at Selected Branches" data-live-search="true"
+                  data-width="56%" data-style="btn-dark" name="SearchBranch" required>
+                  <% branchs.forEach(function(branch){ %>
+                    <option class="opt-style" value="<%=branch.branchID%>"><%=branch.branchName%></option>
+                <% }); %> 
+            </select>      
+        </div>
+        <div class="col-3">
+          <button class="button btn-showtime" type="submit">Showtime</button> 
+        </div>
+      <!-- </form> -->
+
+      <div class="col-3">
+        <div class="form-inline search">
+          <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search...">
+          <span><i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+<!-- <div style="background-color: #fff; margin: 8px;">
+  <% for (const movie of movies) { %>
+    <div>
+      <p>ID: <%= movie.movieID %></p>
+      <p>Name: <%= movie.movieName %></p>
+      <p><%= movies[0].movieLenght %></p>
+    </div>
+  <% } %>
+
+  <%= movies[0].movieName %>
+  
+</div> -->
+
+<div id="slider" class="carousel slide" data-ride="carousel">
+   <!-- Indicators -->
+   <ol class="carousel-indicators">
+     <li data-target="#slider" data-slide-to="0" class="active"></li>
+     <li data-target="#slider" data-slide-to="1"></li>
+     <li data-target="#slider" data-slide-to="2"></li>
+     <li data-target="#slider" data-slide-to="3"></li>
+     <li data-target="#slider" data-slide-to="4"></li>
+   </ol>
+   <div class="carousel-inner" style="max-height: 580px;">
+     <div class="carousel-item active">
+       <img class="cover-carousel w-100" src="https://sv1.picz.in.th/images/2020/03/29/Q25dCE.jpg" alt="First slide">
+       <img class="poster-carousel" src="https://sv1.picz.in.th/images/2020/03/29/Q250IN.jpg" alt="spiderman Poster">
+       <div class="title-carousel">Spider-Man:<br> Into the Spider-Verse</div>
+       <div class="info-carousel">
+         <span>Animation/Action ‧ 1h 56m<br><br></span>
+         <span><p>After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.</p></span>
+       </div>
+     </div>
+     <div class="carousel-item">
+       <img class="cover-carousel w-100" src="https://sv1.picz.in.th/images/2020/04/30/Ujwafv.png" alt="Second slide">
+       <img class="poster-carousel" src="https://sv1.picz.in.th/images/2020/04/30/UjtMUu.png" alt="BirdPrey Poster">
+     </div>
+
+     
+     <div class="carousel-item">
+       <img class="cover-carousel w-100" src="https://sv1.picz.in.th/images/2020/04/30/UlOA6a.png" alt="Third slide">
+       <img class="poster-carousel" src="https://sv1.picz.in.th/images/2020/04/30/UlqZXf.png" alt="Emma Poster">
+     </div>
+
+     <div class="carousel-item">
+      <img class="cover-carousel w-100 " src="https://sv1.picz.in.th/images/2020/04/30/Ulj3GE.png" alt="Third slide">
+      <img class="poster-carousel" src="https://sv1.picz.in.th/images/2020/04/30/UlEHuW.png" alt="Kingsman">
+    </div>
+
+    <div class="carousel-item">
+      <img class="cover-carousel w-100 " src="https://sv1.picz.in.th/images/2020/04/30/UljvJv.png" alt="Fourth slide">
+      <img class="poster-carousel" src="https://sv1.picz.in.th/images/2020/04/30/UljLEN.png" alt="Harry Potter">
+    </div>
+
+
+     
+
+
+   </div>
+   <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="sr-only">Previous</span>
+   </a>
+   <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="sr-only">Next</span>
+   </a>
+ </div>
+
+ <!-- Movies -->
+ <div class="container-fluid">
+   <div class="row mv-row">
+     <h4>Movies</h4>
+     <div class="movies ml-auto">
+       <ul class="nav">
+         <li class="nav-item"><a class="nav-link active" data-target="#nowShowing" href="#">Now Showing</a></li>
+         <li class="nav-item"><a class="nav-link" data-target="#comingSoon" href="#">Coming Soon</a></li>
+       </ul>
+     </div>
+   </div>
+   <div class="movies">
+     <section class="movies-list" id=moviesList>
+       <article id="nowShowing" class="active">
+         <div class="row nowshowing">
+           <div class="col movie">
+
+             <div class="show">
+               <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QL1HAg.jpg" alt="sonic.jpg">
+               <div class="title"> <%= movies[0].movieName %>  </div> 
+               <div class="info">
+                 <span class="genres"><%= moviegenre[0].genreTypeName %> / <%= moviegenre[1].genreTypeName %><br></span>
+                 <span class="lenght"> <%= movies[0].movieLenght %> </span>
+               </div>
+             </div>
+
+             <div class="hide-left">
+               <div class="detail">
+                 <div class="row">
+                   <span class="theater"> <%= theatertype[0].TheaterTypeName %></span>
+                 </div>
+                 <div class="row">
+                   <span class="col rating">6.6/10<br><b>IMDb</b></span>
+                   <span class="col rating spacial">64%<br><b>Rotten Tometoes</b></span>
+                   <span class="col rating">47%<br><b>Metacritic</b></span>
+                 </div>
+                 <div class="row plot">
+                   <p><br>  <%= movies[0].movieDetail %></p>
+                 </div>
+                 <div class="row date">
+                   <div class="col cdate">
+                     <div><b>Release date:</b> <%= movies[0].ReleaseDay %>,<%= movies[0].ReleaseMonth %>,<%= movies[0].ReleaseYear %>  </div>
+                     <div><b>End date:</b> <%= movies[0].OutDay %>,<%= movies[0].OutMonth %>,<%= movies[0].OutYear %> </div>
+                   </div>
+                 </div>
+               </div> 
+             </div>
+
+           </div>
+           
+           <div class="col movie">
+             <div class="show">
+               <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QL1TY9.jpg" alt="emma.jpg">
+               <div class="title"> <%= movies[1].movieName %></div>
+               <div class="info">
+                 <span class="genres"><%= moviegenre[2].genreTypeName %> / <%= moviegenre[3].genreTypeName %><br></span>
+                 <span class="lenght"><%= movies[1].movieLenght %></span>
+               </div>
+             </div>
+             <div class="hide-left">
+               <div class="detail">
+                 <div class="row th">
+                   <span class="theater"><%= theatertype[0].TheaterTypeName %></span>
+                 </div>
+                 <div class="row">
+                   <span class="col rating">6.8/10<br><b>IMDb</b></span>
+                   <span class="col rating spacial">86%<br><b>Rotten Tometoes</b></span>
+                   <span class="col rating">71%<br><b>Metacritic</b></span>
+                 </div>
+                 <div class="row plot">
+                   <p><br><%= movies[1].movieDetail %></p>
+                 </div>
+                 <div class="row date">
+                   <div class="col cdate">
+                     <div><b>Release date:</b> <%= movies[1].ReleaseDay %>,<%= movies[1].ReleaseMonth %>,<%= movies[1].ReleaseYear %></div>
+                     <div><b>End date:</b> <%= movies[1].OutDay %>,<%= movies[1].OutMonth %>,<%= movies[1].OutYear %></div>
+                   </div>
+                 </div>
+               </div> 
+             </div>
+           </div>
+           <div class="col movie">
+             <div class="show">
+             <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QLKO4y.jpg" alt="dolittle.jpg">
+             <div class="title"><%= movies[2].movieName %></div>
+             <div class="info">
+               <span class="genres"><%= moviegenre[4].genreTypeName %> / <%= moviegenre[5].genreTypeName %><br></span>
+               <span class="lenght"><%= movies[2].movieLenght %></span>
+             </div>
+             </div>
+             <div class="hide-left">
+               <div class="detail">
+                 <div class="row">
+                   <span class="theater"><%= theatertype[0].TheaterTypeName %></span>
+                   <span class="theater"><%= theatertype[1].TheaterTypeName %></span>
+                 </div>
+                 <div class="row">
+                   <span class="col rating">5.6/10<br><b>IMDb</b></span>
+                   <span class="col rating spacial">15%<br><b>Rotten Tometoes</b></span>
+                   <span class="col rating">-<br><b>Metacritic</b></span>
+                 </div>
+                 <div class="row plot">
+                   <p><br><%= movies[2].movieDetail %></p>
+                 </div>
+                 <div class="row date">
+                   <div class="col cdate">
+                     <div><b>Release date:</b> <%= movies[2].ReleaseDay %>,<%= movies[2].ReleaseMonth %>,<%= movies[2].ReleaseYear %></div>
+                     <div><b>End date:</b><%= movies[2].OutDay %>,<%= movies[2].OutMonth %>,<%= movies[2].OutYear %> </div>
+                   </div>
+                 </div>
+               </div> 
+             </div>
+           </div>
+           <div class="col movie">
+             <div class="show">
+             <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QLKjr9.jpg" alt="QLKjr9.jpg">
+               <div class="title"><%= movies[3].movieName %></div>
+               <div class="info">
+                 <span class="genres"><%= moviegenre[0].genreTypeName %> / <%= moviegenre[6].genreTypeName %><br></span>
+                 <span class="lenght"><%= movies[3].movieLenght %></span>
+               </div>
+             </div>
+             <div class="hide-right">
+               <div class="detail">
+                 <div class="row">
+                   <span class="theater"><%= theatertype[0].TheaterTypeName %></span>
+                   <span class="theater"><%= theatertype[1].TheaterTypeName %></span>
+                 </div>
+                 <div class="row">
+                   <span class="col rating">6.2/10<br><b>IMDb</b></span>
+                   <span class="col rating spacial">78%<br><b>Rotten Tometoes</b></span>
+                   <span class="col rating">60%<br><b>Metacritic</b></span>
+                 </div>
+                 <div class="row plot">
+                   <p><br><%= movies[3].movieDetail %></p>
+                 </div>
+                 <div class="row date">
+                   <div class="col cdate">
+                     <div><b>Release date:</b> <%= movies[3].ReleaseDay %>,<%= movies[3].ReleaseMonth %>,<%= movies[3].ReleaseYear %></div>
+                     <div><b>End date:</b> <%= movies[3].OutDay %>,<%= movies[3].OutMonth %>,<%= movies[3].OutYear %></div>
+                   </div>
+                 </div>
+               </div> 
+             </div>
+           </div>
+           <div class="col movie">
+             <div class="show">
+             <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QLK29q.jpg" alt="QLK29q.jpg">
+             <div class="title"><%= movies[4].movieName %></div>
+               <div class="info">
+                 <span class="genres">Action/Adventure<br></span>
+                 <span class="lenght">2h 10m</span>
+             </div>
+           </div>
+           <div class="hide-right">
+             <div class="detail">
+               <div class="row">
+                 <span class="theater">2D</span>
+                 <span class="theater">3D</span>
+               </div>
+               <div class="row">
+                 <span class="col rating">6.2/10<br><b>IMDb</b></span>
+                 <span class="col rating spacial">78%<br><b>Rotten Tometoes</b></span>
+                 <span class="col rating">60%<br><b>Metacritic</b></span>
+               </div>
+               <div class="row plot">
+                 <p><br>It's open season on Harley Quinn when her explosive breakup with the Joker puts a big fat target on her back. Unprotected and on the run, Quinn faces the wrath of narcissistic crime boss Black Mask, his right-hand man, Victor Zsasz, and every other thug in the city. But things soon even out for Harley when she becomes unexpected allies with three deadly women -- Huntress, Black Canary and Renee Montoya.</p>
+               </div>
+               <div class="row date">
+                 <div class="col cdate">
+                   <div><b>Release date:</b> February 5, 2020</div>
+                   <div><b>End date:</b> -</div>
+                 </div>
+               </div>
+             </div> 
+           </div>
+         </div>
+
+         <div class="row nowshowing">
+           <div class="col movie">
+             <!--New row-->
+           </div>
+         </div>
+       </article>
+       <article id="comingSoon">
+         <div class="row-month">
+           <span class="vl"></span>
+           <span class="month">Month#1</span>
+         </div>
+         <div class="row comingsoon">
+           <div class="col movie">
+             <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QLZBUy.jpg" alt="QLZWcQ.jpg">
+             <div class="title">Peter Rabbit 2: The Runaway</div>
+               <div class="info">
+                 <span class="genres">Adventure/Comedy<br></span>
+                 <span class="lenght">1h 25m</span>
+               </div>
+           </div>
+           <div class="col movie">
+             <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QLZPSN.jpg" alt="QLZSTg.jpg" >
+             <div class="title">The New Mutants</div>
+               <div class="info">
+                 <span class="genres">Horror/Fantasy<br></span>
+                 <span class="lenght">1h 39m</span>
+               </div>
+           </div>
+           <div class="col movie">
+             
+           </div>
+           <div class="col movie">
+             
+           </div>
+           <div class="col movie">
+             
+           </div>
+         </div>
+         
+         <div class="row-month2">
+           <span class="vl"></span>
+           <span class="month">Month#2</span>
+         </div>
+         <div class="row comingsoon">
+           <div class="col movie">
+             <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QLZBUy.jpg" alt="QLZWcQ.jpg">
+             <div class="title">Peter Rabbit 2: The Runaway</div>
+               <div class="info">
+                 <span class="genres">Adventure/Comedy<br></span>
+                 <span class="lenght">1h 25m</span>
+               </div>
+           </div>
+           <div class="col movie">
+             <img class="poster" src="https://sv1.picz.in.th/images/2020/04/07/QLZPSN.jpg" alt="QLZSTg.jpg" >
+             <div class="title">The New Mutants</div>
+               <div class="info">
+                 <span class="genres">Horror/Fantasy<br></span>
+                 <span class="lenght">1h 39m</span>
+               </div>
+           </div>
+           <div class="col movie">
+             
+           </div>
+           <div class="col movie">
+             
+           </div>
+           <div class="col movie">
+             
+           </div>
+         </div>
+       </article>
+     </section>
+   </div>
+ </div> 
+</body>
+</html>
